@@ -5,15 +5,17 @@
 |Product|Version|
 |:-----:|:-----:|
 |Java|OpenJDK JDK 8|
-|Operating System|Ubuntu 18.04|
-|Portal| master snapshot|
+|Operating System|Debian 9|
+|Portal| Any bundle|
+
+Add the test bundle to the folder before building the image.
 
 ## Startup
 
-```bash
+```sh
 docker build -t <tag> .
 
-docker run -p 8080:8080 -d <tag>:latest
+docker run -p 8080:8080 -it <tag>:latest
 ```
 
 This will start up a Liferay instance on Tomcat using HSQLDB.
